@@ -1,0 +1,57 @@
+{% extends 'main.html' %}
+{% block content %}
+<!-- 
+<p>index</p>
+<div class="room">
+<a href="{% url 'create_room' %}">Create Room</a>
+    {% for room in rooms %}
+    <h4><a href="{% url 'single_room' room.id %}">{{room.name}}</a></h4>
+    <p>{{room.description}}</p>
+    <p>{{room.topic}}</p>
+    <p><a href="{% url 'profile' room.owner.id %}">{{room.owner.name}}</a></p>
+    <a href="{% url 'delete_room' room.id %}">Delete room</a>
+    <a href="{% url 'edit_room' room.id %}">Edit room</a>
+    <P>-----------------------------------------------</P>
+    {% endfor %}
+</div>
+
+
+
+<div class="topic">
+    <h1>Topics</h1>
+    <ul>
+        {% for topic in topics %}
+    
+            <li><a href="{% url 'index' %}?q={{topic.name}}">{{ topic }}</a></li>
+        
+        {% endfor %}
+    </ul>
+</div>
+
+<div class='feed'>
+    <h1>Messages</h1>
+    <ul>
+        {% for message in messages %}
+        <li>{{ message.owner.name }}:</li>
+        <li>{{ message }}</li>
+        <li>{{ message.created }}</li>
+        <br>
+        {% endfor %}
+    </ul>
+</div> -->
+<main class="layout layout--3">
+    <div class="container">
+      <!-- Topics Start -->
+      {% include 'base/topic_component.html' %}
+      <!-- Topics End -->
+
+      <!-- Room List Start -->
+      {% include 'base/room_component.html' %}
+      <!-- Room List End -->
+
+      <!-- Activities Start -->
+      {% include 'base/activtiy_component.html' %}
+      <!-- Activities End -->
+    </div>
+  </main>
+{% endblock content %}

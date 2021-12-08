@@ -1,0 +1,22 @@
+body{
+    background-color: yellow;
+}
+.topic{
+    float:left;
+    width:30%;
+    box-sizing: border-box;
+    border: black 3px solid;
+
+}
+.room{
+    float:left;
+    width:40%;
+    border: black 3px solid;
+    box-sizing: border-box;
+}
+.feed{
+    float:right;
+    width:30%;
+    box-sizing: border-box;
+    border: black 3px solid;
+}
