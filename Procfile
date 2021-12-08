@@ -1,1 +1,1 @@
-web:gunicorn freechat2.wsgi --log-file -
+web: gunicorn freechat2.wsgi --log-file -
