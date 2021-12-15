@@ -78,36 +78,15 @@ TEMPLATES = [
 WSGI_APPLICATION = 'freechat2.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'qiangjiannima',
-#         'USER':'postgres',
-#         'PASSWORD':'123456rty',
-#         'HOST':'localhost',
-#         'PORT':'5432'
-#     }
-# }
+
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'freechatdata',
-        'USER':'bongbongbong',
-        'PASSWORD':'123456rty',
-        'HOST':'database-1.cvvmk3m0a9zz.ap-northeast-2.rds.amazonaws.com',
-        'PORT':'5432'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
 
 
 # Password validation
@@ -162,8 +141,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 AWS_QUERYSTRING_AUTH = False
 AWS_S3_FILE_OVERWRITE = False
-AWS_ACCESS_KEY_ID = 'AKIATTFIGQGXT2YXPQGO'
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'zhoutongtong'
+AWS_ACCESS_KEY_ID = ''
+AWS_SECRET_ACCESS_KEY = '+'
+AWS_STORAGE_BUCKET_NAME = ''
 #因为我使用的是代理上网 把ssl验证关了 要不然不让我上传静态文件 我要是在美国就好了
 AWS_S3_USE_SSL = False
